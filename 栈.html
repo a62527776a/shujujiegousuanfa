@@ -1,0 +1,29 @@
+<script>
+function Stack(){
+    var items = [];
+    this.push = function(element){
+        items.push(element);
+    }
+    this.pop = function(){
+        return items.pop();
+    }
+    this.clear = function(){
+        items = [];
+    }
+    this.peek = function(){
+        console.log(items[items.length - 1]);
+    }
+    this.print = function(){
+        console.log(items.toString());
+    }
+    this.size = function(){
+        console.log(items.length);
+    }
+}
+var stack = new Stack();
+stack.push(4);
+stack.push(12);
+stack.push(123123123123);
+console.log(stack.print());
+stack.peek();
+</script>
