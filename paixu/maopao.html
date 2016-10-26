@@ -1,0 +1,26 @@
+<script>
+let list = [5,3,7,32,1,7,2];
+
+
+
+
+let maopao = (list) => {
+    for(let i = 0;i < list.length;i++){
+        if(i == 0) {
+            console.log(i);
+        } else {
+            if(list[i] < list[i - 1]) {
+                let c = 0;
+                c = list[i];
+                list[i] = list[i - 1];
+                list[i - 1] = c; 
+                console.log(list);
+                maopao(list);//递归
+            };
+        }
+    }
+    return list;
+}
+
+maopao(list);
+</script>

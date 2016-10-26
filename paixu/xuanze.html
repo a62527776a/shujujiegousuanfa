@@ -1,0 +1,31 @@
+<script>
+let list = [5,3,7,32,1,7,2];
+let list1 = [];
+let largest;
+
+let xuanze = (list,list1) => {
+    for(let i = 0;i < list.length;i++){
+        if(i == 0){
+            largest = list[i];
+            largestNum = i;
+        } else {
+            if(list[i] < largest){
+                largest = list[i];
+                largestNum = i;
+            }
+        }
+    }
+    let num = list.length - largestNum;
+    console.log(num);
+    console.log(largestNum);
+    list1.push(largest);
+    list.splice(largestNum,1);
+    console.log(list1);
+    if(list.length !== 0) {
+        xuanze(list,list1);
+    }
+}
+
+xuanze(list, list1);
+
+</script>
